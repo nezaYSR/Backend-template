@@ -16,6 +16,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon app.js"
   },
-  "author": "",
+  "engines": {
+    "node": "12.18.3"
+  },
+  "author": "Neza",
   "license": "ISC"
 }
