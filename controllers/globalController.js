@@ -26,20 +26,12 @@ class GlobalController {
                 message,
             });
 
-            await setTimeout(() => {
-                newMessage.save();
+            await newMessage.save();
 
-                res.status(201).json({
-                    success: true,
-                    message: 'thanks for reaching me'
-                })
-            }, 1500)
-            // await newMessage.save();
-
-            // res.status(201).json({
-            //     success: true,
-            //     message: 'thanks for reaching me'
-            // })
+            res.status(201).json({
+                success: true,
+                message: 'thanks for reaching me'
+            })
 
         }
     }
