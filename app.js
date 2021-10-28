@@ -21,6 +21,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(routes);
 
+// app.listen(5000, () => {
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${PORT}`);
 });

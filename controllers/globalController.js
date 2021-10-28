@@ -21,18 +21,25 @@ class GlobalController {
         if (validatingEmail == false) {
             next({ name: "WRONG_EMAIL_FORMAT" });
         } else {
-
             const newMessage = new Inbox({
                 email,
                 message,
             });
 
-            await newMessage.save();
+            await setTimeout(() => {
+                newMessage.save();
 
-            res.status(201).json({
-                success: true,
-                message: 'thanks for reaching me'
-            })
+                res.status(201).json({
+                    success: true,
+                    message: 'thanks for reaching me'
+                })
+            }, 1500)
+            // await newMessage.save();
+
+            // res.status(201).json({
+            //     success: true,
+            //     message: 'thanks for reaching me'
+            // })
 
         }
     }
