@@ -14,7 +14,7 @@ mongooseConnect();
 app.use(cors());
 
 app.get("/", (req, res) => {
-  res.send("hello all");
+  res.send("hello all yoow");
 });
 
 app.use(express.urlencoded({ extended: false }));
