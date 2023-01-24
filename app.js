@@ -14,7 +14,7 @@ mongooseConnect();
 app.use(cors());
 
 app.get("/", (req, res) => {
-    res.send("hello all");
+  res.send("hello all");
 });
 
 app.use(express.urlencoded({ extended: false }));
@@ -23,5 +23,5 @@ app.use(routes);
 
 // app.listen(5000, () => {
 app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${PORT}`);
+  console.log(`Example app listening at http://localhost:${PORT}`);
 });
